@@ -1,0 +1,205 @@
+
+
+
+.carousel {
+    align-content: center;
+    justify-content: center;
+    grid-column:full-start /full-end ;
+    
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+
+.carousel-dots {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  display: flex;
+  gap: 10px;
+
+  .dot {
+    width: 14px;
+    height: 14px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &.active {
+      background-color: #fff;
+    }
+  }
+}
+
+
+  
+  
+    .carousel-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../img/farm-bg.jpg') center/cover no-repeat;
+    z-index: 1;
+
+  .carousel-content {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .carousel-slide {
+      position: absolute;
+      text-align: center;
+      color: #fff;
+      opacity: 0;
+      transition: opacity 0.8s ease-in-out;
+
+      &.active {
+        opacity: 1;
+      }
+
+      .content {
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 2rem 3rem;
+        border-radius: 10px;
+        animation-duration: 1s;
+      }
+
+    h2 {
+    background-image: linear-gradient(
+    to bottom,
+    rgba($color-secondary, 0.8), 
+    rgba($color-grey-light-1, 0.5) 
+  );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+  font-size: 7rem;
+  font-family: $font-display;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+
+      p {
+        font-size: 4rem;
+      }
+
+      &.active .animate-left {
+        animation-name: slideInLeft;
+      }
+
+      &.active .animate-top {
+        animation-name: slideInTop;
+      }
+
+      &.active .animate-right {
+        animation-name: slideInRight;
+      }
+    }
+  }
+}
+
+// Animations
+// Animation Keyframes
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInTop {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+// Classes applied dynamically
+.animate-left {
+  animation: slideInLeft 1s ease forwards;
+}
+
+.animate-top {
+  animation: slideInTop 1s ease forwards;
+}
+
+.animate-right {
+  animation: slideInRight 1s ease forwards;
+}
+
+// position: relative;
+//   height: 140vh;
+//   width: 100%;
+//   overflow: hidden;
+
+//   .curve {
+//     position: absolute;
+//     bottom: 0;
+//     width: 100%;
+//     overflow: hidden;
+//     line-height: 0;
+//     z-index: 10;
+
+//     svg {
+//       display: block;
+//       width: 100%;
+//       height: 100px;
+
+//       path {
+//         fill: #fff; // or any background color of the next section
+//       }
+//     }
+//   }
+
+.curve {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.curve svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 87px;
+}
+
+.curve .shape-fill {
+    fill: #FFFFFF;
+}
+
+}
+
+

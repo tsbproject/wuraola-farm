@@ -1,0 +1,548 @@
+mb-sm {
+  margin-bottom: 2rem;
+}
+
+mb-md {
+  margin-bottom: 3rem;
+}
+
+mb-lg {
+  margin-bottom: 4rem;
+}
+
+mb-hg {
+  margin-bottom: 8rem;
+}
+
+mt-sm {
+  margin-top: 2rem;
+}
+
+mt-md {
+  margin-top: 3rem;
+}
+
+mt-lg {
+  margin-top: 4rem;
+}
+
+mt-hg {
+  margin-top: 8rem;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  color: #6D5D4B;
+  font-weight: 300;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+.container.info-bar {
+  display: flex;
+}
+
+.container.header {
+  display: flex;
+}
+
+.container.home-layout {
+  display: grid;
+  grid-template-rows: 100vh repeat(4, min-content);
+  grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(10, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+}
+@media only screen and (max-width: 75em) {
+  .container.home-layout {
+    grid-template-rows: 20vh 100vh min-content repeat(2, 63vw) repeat(9, min-content);
+    grid-template-columns: repeat(auto-fit, minmax(1fr));
+  }
+}
+@media only screen and (max-width: 68.75em) {
+  .container.home-layout {
+    grid-template-rows: 20vh 100vh min-content repeat(2, 55vw) repeat(9, min-content);
+    grid-template-columns: repeat(auto-fit, minmax(1fr));
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  .container.home-layout {
+    grid-template-rows: 20vh 100vh min-content 330vw min-content repeat(9, min-content);
+    grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+  }
+}
+@media only screen and (max-width: 37.05em) {
+  .container.home-layout {
+    grid-template-rows: 20vh 100vh min-content 300vw min-content repeat(9, min-content);
+    grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+  }
+}
+@media only screen and (max-width: 31.25em) {
+  .container.home-layout {
+    grid-template-rows: 20vh 120vh min-content 300vw min-content repeat(9, min-content);
+    grid-template-columns: repeat(auto-fit, minmax(0vw, 1fr));
+  }
+}
+@media only screen and (max-width: 25em) {
+  .container.home-layout {
+    grid-template-rows: 20vh 100vh min-content 450vw min-content repeat(9, min-content);
+    grid-template-columns: repeat(auto-fit, minmax(0vw, 1fr));
+  }
+}
+
+.container.services-layout {
+  display: grid;
+  grid-template-rows: 20vh 40vh repeat(7, min-content) 30vh min-content 30vh min-content min-content;
+  grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(10, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+}
+
+/* Media Queries */
+@media only screen and (max-width: 75em) { /* Replace $bp-largest */
+  .container.services-layout {
+    grid-template-rows: 20vh 30vh repeat(7, min-content) 30vh min-content 30vh min-content min-content;
+    grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+  }
+}
+@media only screen and (max-width: 68.75em) { /* Replace $bp-large */
+  .container.services-layout {
+    grid-template-rows: 20vh 30vh repeat(7, min-content) 30vh min-content 30vh min-content min-content;
+    grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+  }
+}
+@media only screen and (max-width: 56.25em) { /* Replace $bp-medium */
+  .container.services-layout {
+    grid-template-rows: 20vh 30vh repeat(7, min-content) 30vh min-content 30vh min-content min-content;
+    grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+  }
+}
+@media only screen and (max-width: 37.05em) { /* Replace $bp-small */
+  .container.services-layout {
+    grid-template-rows: 20vh 30vh repeat(7, min-content) 30vh min-content 30vh min-content min-content;
+    grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+  }
+}
+@media only screen and (max-width: 31.25em) { /* Replace $bp-smaller */
+  .container.services-layout {
+    grid-template-rows: 20vh 25vh repeat(7, min-content) 30vh min-content 30vh min-content min-content;
+    grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+  }
+}
+@media only screen and (max-width: 25em) { /* Replace $bp-smallest */
+  .container.services-layout {
+    grid-template-rows: 20vh repeat(8, min-content) 30vh min-content 30vh min-content min-content;
+    grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+  }
+}
+.pickup-layout {
+  grid-template-rows: 20vh 120vh repeat(4, min-content);
+  grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(10, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+}
+@media only screen and (max-width: 75em) {
+  .pickup-layout {
+    grid-template-rows: 20vh 120vh repeat(4, min-content);
+    grid-template-columns: repeat(auto-fit, minmax(1fr));
+  }
+}
+@media only screen and (max-width: 68.75em) {
+  .pickup-layout {
+    grid-template-rows: 20vh 120vh repeat(4, min-content);
+    grid-template-columns: repeat(auto-fit, minmax(1fr));
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  .pickup-layout {
+    grid-template-rows: 20vh 120vh repeat(4, min-content);
+    grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+  }
+}
+@media only screen and (max-width: 37.05em) {
+  .pickup-layout {
+    grid-template-rows: 20vh 120vh repeat(4, min-content);
+    grid-template-columns: repeat(auto-fit, minmax(0rem, 1fr));
+  }
+}
+@media only screen and (max-width: 31.25em) {
+  .pickup-layout {
+    grid-template-rows: 20vh 120vh repeat(4, min-content);
+    grid-template-columns: repeat(auto-fit, minmax(0vw, 1fr));
+  }
+}
+@media only screen and (max-width: 25em) {
+  .pickup-layout {
+    grid-template-rows: 20vh 120vh repeat(4, min-content);
+    grid-template-columns: repeat(auto-fit, minmax(0rem, 1fr));
+  }
+}
+
+.about-layout {
+  grid-template-rows: 20vh min-content 40vh repeat(2, min-content);
+  grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(10, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+}
+@media only screen and (max-width: 75em) {
+  .about-layout {
+    grid-template-rows: 20vh min-content 40vh repeat(2, min-content);
+    grid-template-columns: repeat(auto-fit, minmax(1fr));
+  }
+}
+@media only screen and (max-width: 68.75em) {
+  .about-layout {
+    grid-template-rows: 20vh min-content 40vh repeat(2, min-content);
+    grid-template-columns: repeat(auto-fit, minmax(1fr));
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  .about-layout {
+    grid-template-rows: 20vh repeat(4, min-content);
+    grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+  }
+}
+@media only screen and (max-width: 37.05em) {
+  .about-layout {
+    grid-template-rows: 20vh repeat(4, min-content);
+    grid-template-columns: repeat(auto-fit, minmax(0rem, 1fr));
+  }
+}
+@media only screen and (max-width: 31.25em) {
+  .about-layout {
+    grid-template-rows: 20vh repeat(4, min-content);
+    grid-template-columns: repeat(auto-fit, minmax(0vw, 1fr));
+  }
+}
+@media only screen and (max-width: 25em) {
+  .about-layout {
+    grid-template-rows: 20vh repeat(4, min-content);
+    grid-template-columns: repeat(auto-fit, minmax(0vw, 1fr));
+  }
+}
+
+.contact-layout {
+  grid-template-rows: 20vh 60vh repeat(3, min-content);
+  grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(10, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+}
+@media only screen and (max-width: 75em) {
+  .contact-layout {
+    grid-template-rows: 20vh 120vh repeat(4, min-content);
+    grid-template-columns: repeat(auto-fit, minmax(1fr));
+  }
+}
+@media only screen and (max-width: 68.75em) {
+  .contact-layout {
+    grid-template-rows: 20vh 120vh repeat(4, min-content);
+    grid-template-columns: repeat(auto-fit, minmax(1fr));
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  .contact-layout {
+    grid-template-rows: 20vh 120vh repeat(4, min-content);
+    grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+  }
+}
+@media only screen and (max-width: 37.05em) {
+  .contact-layout {
+    grid-template-rows: 20vh 120vh repeat(4, min-content);
+    grid-template-columns: repeat(auto-fit, minmax(0rem, 1fr));
+  }
+}
+@media only screen and (max-width: 31.25em) {
+  .contact-layout {
+    grid-template-rows: 20vh 120vh repeat(4, min-content);
+    grid-template-columns: repeat(auto-fit, minmax(0vw, 1fr));
+  }
+}
+@media only screen and (max-width: 25em) {
+  .contact-layout {
+    grid-template-rows: 20vh 120vh repeat(4, min-content);
+    grid-template-columns: repeat(auto-fit, minmax(0rem, 1fr));
+  }
+}
+
+.schedule-layout {
+  grid-template-rows: min-content;
+  grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(10, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+}
+@media only screen and (max-width: 75em) {
+  .schedule-layout {
+    grid-template-rows: min-content;
+    grid-template-columns: repeat(auto-fit, minmax(1fr));
+  }
+}
+@media only screen and (max-width: 68.75em) {
+  .schedule-layout {
+    grid-template-rows: min-content;
+    grid-template-columns: repeat(auto-fit, minmax(1fr));
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  .schedule-layout {
+    grid-template-rows: min-content;
+    grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+  }
+}
+@media only screen and (max-width: 37.05em) {
+  .schedule-layout {
+    grid-template-rows: min-content;
+    grid-template-columns: repeat(auto-fit, minmax(0rem, 1fr));
+  }
+}
+@media only screen and (max-width: 31.25em) {
+  .schedule-layout {
+    grid-template-rows: min-content;
+    grid-template-columns: repeat(auto-fit, minmax(0vw, 1fr));
+  }
+}
+@media only screen and (max-width: 25em) {
+  .schedule-layout {
+    grid-template-rows: min-content;
+    grid-template-columns: repeat(auto-fit, minmax(0rem, 1fr));
+  }
+}
+
+.header__navigation {
+  list-style: none;
+}
+.header__navigation ul {
+  display: flex;
+  margin-right: 20rem;
+  column-gap: 2rem;
+  list-style-type: none;
+  font-size: 1.5rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+}
+.header__navigation a {
+  text-decoration: none;
+  color: #26ae2a;
+}
+.header__navigation a:active {
+  color: #54483A;
+}
+.header__navigation a:hover {
+  color: #F9A826;
+}
+
+.info-bar {
+  display: flex;
+  height: 5rem;
+  background-color: #26ae2a;
+  align-items: center;
+}
+.info-bar__email-svg {
+  width: 1.6rem;
+  height: 1.6rem;
+  fill: #54483A;
+  margin-left: 15rem;
+  margin-right: 0.6rem;
+}
+.info-bar__email {
+  font-size: 1.4rem;
+  color: #f9f7f6;
+}
+.info-bar__phone-svg {
+  width: 1.6rem;
+  height: 1.6rem;
+  fill: #54483A;
+  margin-left: 3rem;
+  margin-right: 0.6rem;
+}
+.info-bar__phone {
+  font-size: 1.4rem;
+  color: #f9f7f6;
+}
+
+.social-icons {
+  display: flex;
+  align-items: center;
+  margin-left: 70rem;
+}
+.social-icons__svg {
+  margin-right: 2rem;
+  height: 3rem;
+  width: 3rem;
+  fill: #54483A;
+  border-radius: 50%;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: solid 0.3rem #54483A;
+  padding: 0.5rem;
+}
+.social-icons__svg :hover {
+  fill: #F9A826;
+}
+
+.header {
+  display: flex;
+  width: 100%;
+  height: 12rem;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: solid 0.1rem;
+}
+.header__logo-box {
+  height: 10rem;
+  width: 3rem;
+  margin-left: 2rem;
+  margin-top: 2rem;
+}
+.header__logo {
+  height: 8rem;
+}
+
+.carousel {
+  align-content: center;
+  justify-content: center;
+  grid-column: full-start/full-end;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+.carousel .carousel-dots {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  display: flex;
+  gap: 10px;
+}
+.carousel .carousel-dots .dot {
+  width: 14px;
+  height: 14px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.carousel .carousel-dots .dot.active {
+  background-color: #fff;
+}
+.carousel .carousel-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../img/farm-bg.jpg") center/cover no-repeat;
+  z-index: 1;
+}
+.carousel .carousel-bg .carousel-content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.carousel .carousel-bg .carousel-content .carousel-slide {
+  position: absolute;
+  text-align: center;
+  color: #fff;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+}
+.carousel .carousel-bg .carousel-content .carousel-slide.active {
+  opacity: 1;
+}
+.carousel .carousel-bg .carousel-content .carousel-slide .content {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 2rem 3rem;
+  border-radius: 10px;
+  animation-duration: 1s;
+}
+.carousel .carousel-bg .carousel-content .carousel-slide h2 {
+  background-image: linear-gradient(to bottom, rgba(249, 168, 38, 0.8), rgba(249, 247, 246, 0.5));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 7rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+.carousel .carousel-bg .carousel-content .carousel-slide p {
+  font-size: 4rem;
+}
+.carousel .carousel-bg .carousel-content .carousel-slide.active .animate-left {
+  animation-name: slideInLeft;
+}
+.carousel .carousel-bg .carousel-content .carousel-slide.active .animate-top {
+  animation-name: slideInTop;
+}
+.carousel .carousel-bg .carousel-content .carousel-slide.active .animate-right {
+  animation-name: slideInRight;
+}
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slideInTop {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.carousel .animate-left {
+  animation: slideInLeft 1s ease forwards;
+}
+.carousel .animate-top {
+  animation: slideInTop 1s ease forwards;
+}
+.carousel .animate-right {
+  animation: slideInRight 1s ease forwards;
+}
+.carousel .curve {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+.carousel .curve svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 87px;
+}
+.carousel .curve .shape-fill {
+  fill: #FFFFFF;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: center-start/center-end;
+  height: 70vh;
+}
+
+/*# sourceMappingURL=style.css.map */
