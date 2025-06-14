@@ -78,19 +78,35 @@
     height: 12rem;
     justify-content: space-between;
     align-items: center;
-    border-bottom: solid .1rem ;
+    position: relative;
+ 
  
     &__logo-box {
         height: 10rem;
         width: 3rem;
-        margin-left: 2rem;
+        margin-left: 5rem;
         margin-top: 2rem;
     }
 
     &__logo {
-        height: 8rem;
+        height: 6rem;
+
 
     }
+
+   &__title {
+    font-size: $heading-secondary-font;
+    font-family: $font-display;
+    font-weight: 400;
+    color: $color-primary-dark;
+    
+    
+    
+    
+    position: absolute;
+    bottom: 0.5rem;
+    left: 5rem;
+   }
 
 
     

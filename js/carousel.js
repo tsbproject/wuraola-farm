@@ -1,50 +1,103 @@
-const slides = document.querySelectorAll(".carousel-slide");
-const dots = document.querySelectorAll(".dot");
-let current = 0;
 
-function restartAnimation(element, animationClass) {
-  element.classList.remove(animationClass);
-  void element.offsetWidth;
-  element.classList.add(animationClass);
-}
 
-function showSlide(index) {
-  slides.forEach((slide, i) => {
-    const content = slide.querySelector('.content');
-    slide.classList.remove("active");
-    if (content) {
-      content.classList.remove("animate-left", "animate-top", "animate-right");
-    }
-    dots[i].classList.remove("active");
-  });
+// const slides = document.querySelectorAll('.carousel-slide');
+// const dots = document.querySelectorAll('.dot');
+// let current = 0;
+// const interval = 8000;
 
-  const currentSlide = slides[index];
-  const content = currentSlide.querySelector('.content');
-  currentSlide.classList.add("active");
-  dots[index].classList.add("active");
+// function showSlide(index) {
+//   slides.forEach((slide, i) => {
+//     slide.classList.toggle('active', i === index);
+//     dots[i].classList.toggle('active', i === index);
+//   });
+//   current = index;
+// }
 
-  const animations = ["animate-left", "animate-top", "animate-right"];
-  const animationClass = animations[index % animations.length];
+// function nextSlide() {
+//   const next = (current + 1) % slides.length;
+//   showSlide(next);
+// }
 
-  if (content) {
-    restartAnimation(content, animationClass);
+// dots.forEach(dot => {
+//   dot.addEventListener('click', () => {
+//     const slideIndex = parseInt(dot.dataset.slide);
+//     showSlide(slideIndex);
+//   });
+// });
+
+// setInterval(nextSlide, interval);
+
+document.addEventListener("DOMContentLoaded", () => {
+  const slides = document.querySelectorAll(".carousel-slide");
+  const dots = document.querySelectorAll(".dot");
+  const prevBtn = document.querySelector(".carousel-arrow.prev");
+  const nextBtn = document.querySelector(".carousel-arrow.next");
+  let currentSlide = 0;
+  let slideInterval;
+
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.classList.remove("active");
+      dots[i].classList.remove("active");
+
+      // Restart animation by removing and re-adding the element
+      const text = slide.querySelector(".carousel-text");
+      if (text) {
+        text.style.animation = "none";
+        // force reflow
+        void text.offsetWidth;
+        text.style.animation = "";
+      }
+    });
+
+    slides[index].classList.add("active");
+    dots[index].classList.add("active");
   }
 
-  current = index;
-}
+  function nextSlide() {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+  }
 
-let interval = setInterval(() => {
-  current = (current + 1) % slides.length;
-  showSlide(current);
-}, 5000);
+  function prevSlide() {
+    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+    showSlide(currentSlide);
+  }
 
-dots.forEach(dot => {
-  dot.addEventListener("click", () => {
-    clearInterval(interval);
-    showSlide(+dot.dataset.slide);
-    interval = setInterval(() => {
-      current = (current + 1) % slides.length;
-      showSlide(current);
-    }, 5000);
+  function startAutoSlide() {
+    slideInterval = setInterval(nextSlide, 8000); // change every 8s
+  }
+
+  function stopAutoSlide() {
+    clearInterval(slideInterval);
+  }
+
+  dots.forEach((dot, index) => {
+    dot.addEventListener("click", () => {
+      stopAutoSlide();
+      currentSlide = index;
+      showSlide(currentSlide);
+      startAutoSlide();
+    });
   });
+
+  if (prevBtn) {
+    prevBtn.addEventListener("click", () => {
+      stopAutoSlide();
+      prevSlide();
+      startAutoSlide();
+    });
+  }
+
+  if (nextBtn) {
+    nextBtn.addEventListener("click", () => {
+      stopAutoSlide();
+      nextSlide();
+      startAutoSlide();
+    });
+  }
+
+  // Init
+  showSlide(currentSlide);
+  startAutoSlide();
 });

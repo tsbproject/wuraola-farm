@@ -1,0 +1,14 @@
+.btn-carousel {
+    font-size: 2rem;
+    padding: 1.5rem 6rem;
+    border-radius: 2rem;
+    cursor: pointer;
+    background-color: $color-primary-dark;
+
+
+    &:hover {
+        color: $color-grey-light-1;
+        background-color: $color-secondary;
+    }
+
+}
