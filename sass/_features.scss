@@ -2,13 +2,31 @@
 
 
 .features {
-  grid-column: center-start / center-end;
+  grid-column: full-start / full-end;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
   padding: 4rem 2rem;
   margin-top: 2rem ;
   background-color: $color-secondary;
+
+     @media only screen and (max-width:$bp-medium) {
+            grid-template-columns:( 1fr);
+            
+        }
+
+     @media only screen and (max-width:$bp-small) {
+           grid-template-columns:( 1fr);
+        }
+
+     @media only screen and (max-width:$bp-smaller) {
+            grid-template-columns:( 1fr);
+        }
+    
+
+      @media only screen and (max-width:$bp-smallest) {
+            grid-template-columns:( 1fr);
+        }
 
   .product-card {
     position: relative;
@@ -23,6 +41,24 @@
       height: 100%;
       object-fit: cover;
       transition: transform 0.5s ease;
+
+       @media only screen and (max-width:$bp-medium) {
+            
+        }
+
+     @media only screen and (max-width:$bp-small) {
+           max-width: 100%;
+       
+        }
+
+     @media only screen and (max-width:$bp-smaller) {
+            max-width: 100%;
+        }
+    
+
+      @media only screen and (max-width:$bp-smallest) {
+           max-width: 100%;
+        }
     }
 
     .product-info {

@@ -4,6 +4,7 @@
     height: 5rem;
     background-color: $color-primary-dark;
     align-items: center;
+    
    
 
 
@@ -13,11 +14,62 @@
         fill: $color-grey-dark-1;
          margin-left: 15rem;
          margin-right: .6rem;
+
+          @media only screen and (max-width:$bp-medium) {
+            width: 1.3rem;
+            height: 1.3rem;
+            fill: $color-grey-dark-1;
+            margin-left: 1rem;
+            margin-right: .6rem;
+        }
+
+         @media only screen and (max-width:$bp-small) {
+            width: 1.3rem;
+            height: 1.3rem;
+            fill: $color-grey-dark-1;
+            margin-left: 1rem;
+            margin-right: .6rem;
+        }
+
+           @media only screen and (max-width:$bp-smaller) {
+            width: 1.3rem;
+            height: 1.3rem;
+            fill: $color-grey-dark-1;
+            margin-left: 10rem;
+            margin-right: .6rem;
+        }
+
+         @media only screen and (max-width:$bp-smallest) {
+            width: 1.3rem;
+            height: 1.3rem;
+            fill: $color-grey-dark-1;
+            margin-left: 5rem;
+            margin-right: 1rem;
+        }
+   
     }
 
     &__email {
         font-size: 1.4rem;
         color: $color-grey-light-1;
+
+
+          @media only screen and (max-width:$bp-medium) {
+            font-size: 1.3rem;
+        }
+
+        @media only screen and (max-width:$bp-small) {
+            font-size: 1.3rem;
+        }
+
+         @media only screen and (max-width:$bp-smaller) {
+            font-size: 1.3rem;
+        }
+
+         @media only screen and (max-width:$bp-smallest) {
+            font-size: 1.3rem;
+        }
+        
     }
     
 
@@ -27,11 +79,59 @@
         fill: $color-grey-dark-1;
          margin-left: 3rem;
          margin-right: .6rem;
+
+          @media only screen and (max-width:$bp-medium) {
+            width: 1.4rem;
+            height: 1.4rem;
+            fill: $color-grey-dark-1;
+            margin-left: 3rem;
+            margin-right: 1rem;
+        }
+
+          @media only screen and (max-width:$bp-small) {
+            width: 1.4rem;
+            height: 1.4rem;
+            fill: $color-grey-dark-1;
+            margin-left: 3rem;
+            margin-right: 1rem;
+        }
+
+          @media only screen and (max-width:$bp-smaller) {
+            width: 1.4rem;
+            height: 1.4rem;
+            fill: $color-grey-dark-1;
+            margin-left: 3rem;
+            margin-right: 1rem;
+        }
+
+          @media only screen and (max-width:$bp-smallest) {
+            width: 1.4rem;
+            height: 1.4rem;
+            fill: $color-grey-dark-1;
+            margin-left: 3rem;
+            margin-right: 1rem;
+        }
     }
 
      &__phone {
         font-size: 1.4rem;
         color: $color-grey-light-1;
+
+        @media only screen and (max-width:$bp-medium) {
+            font-size: 1.3rem;
+        }
+
+        @media only screen and (max-width:$bp-small) {
+            font-size: 1.3rem;
+        }
+
+         @media only screen and (max-width:$bp-smaller) {
+            font-size: 1.3rem;
+        }
+
+         @media only screen and (max-width:$bp-smallest) {
+            font-size: 1.3rem;
+        }
     }
     
     
@@ -41,6 +141,24 @@
     display: flex;
     align-items: center;
     margin-left: 70rem;
+
+     @media only screen and (max-width:$bp-medium) {
+            display: none;
+        }
+
+    @media only screen and (max-width:$bp-small) {
+            display: none;
+        }
+
+     @media only screen and (max-width:$bp-smaller) {
+            display: none;
+        }
+    
+
+      @media only screen and (max-width:$bp-smallest) {
+            display: none;
+        }
+    
     
      
     
@@ -91,21 +209,46 @@
     &__logo {
         height: 6rem;
 
+        @media only screen and (max-width:$bp-medium) {
+            height: 8rem;
+        } 
 
+          @media only screen and (max-width:$bp-small) {
+            height: 7em;
+        } 
+
+             @media only screen and (max-width:$bp-smaller) {
+            height: 7rem;
+        } 
+
+            @media only screen and (max-width:$bp-smallest) {
+            height: 7rem;
+        } 
     }
 
-   &__title {
-    font-size: $heading-secondary-font;
-    font-family: $font-display;
-    font-weight: 400;
-    color: $color-primary-dark;
-    
-    
-    
-    
-    position: absolute;
-    bottom: 0.5rem;
-    left: 5rem;
+   
+   
+    &__title {
+        font-size: $heading-secondary-font;
+        font-family: $font-display;
+        font-weight: 400;
+        color: $color-primary-dark;
+        
+        position: absolute;
+        bottom: 0.5rem;
+        left: 5rem;
+
+         @media only screen and (max-width:$bp-medium) {
+           display: none;
+        } 
+
+          @media only screen and (max-width:$bp-small) {
+            height: 4rem;
+        } 
+
+         @media only screen and (max-width:$bp-smaller) {
+           display: none;
+        } 
    }
 
 

@@ -16,6 +16,24 @@
   width: 100%;
   overflow: hidden;
   grid-column: full-start / full-end;
+
+    @media only screen and (max-width:$bp-medium) {
+         
+            
+        }
+
+     @media only screen and (max-width:$bp-small) {
+            
+        }
+
+     @media only screen and (max-width:$bp-smaller) {
+          
+        }
+    
+
+      @media only screen and (max-width:$bp-smallest) {
+         
+        }
   
 
   .carousel-slide {
@@ -39,6 +57,25 @@
       object-fit: cover;
       filter: brightness(50%);
       animation: zoomInOut 20s ease-in-out infinite;
+
+        @media only screen and (max-width:$bp-medium) {
+               max-width: 100%;
+             
+            }
+
+        @media only screen and (max-width:$bp-small) {
+               max-width: 100%;
+            }
+
+        @media only screen and (max-width:$bp-smaller) {
+               max-width: 100%;
+            }
+        
+
+          @media only screen and (max-width:$bp-smallest) {
+                max-width: 100%;
+
+            }
     }
 
     .carousel-text {
@@ -66,6 +103,72 @@
         color: $color-secondary;
         font-weight: 600;
       }
+
+        @media only screen and (max-width:$bp-medium) {
+            
+        }
+
+        @media only screen and (max-width:$bp-small) {
+            
+        }
+
+         @media only screen and (max-width:$bp-smaller) {
+
+          position: absolute;
+          top: 15%;
+          left: 10%;
+          transform: translateY(-50%);
+          color: #fff;
+          text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+          animation: fadeInUp 2s ease-out forwards;
+          opacity: 0;
+
+          h2 {
+
+            font-size:3.3rem;
+            font-weight: 600;
+            font-family: $font-display;
+            text-shadow: $color-grey-dark-1 ;
+            color: $color-primary-dark;
+            margin-bottom: 1rem;
+          }
+
+          p {
+            font-size: 2rem;
+            color: $color-secondary;
+            font-weight: 600;
+          }
+           
+        }
+
+         @media only screen and (max-width:$bp-smallest) {
+      
+          position: absolute;
+          top: 10%;
+          left: 10%;
+          transform: translateY(-50%);
+          color: #fff;
+          text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+          animation: fadeInUp 2s ease-out forwards;
+          opacity: 0;
+
+          h2 {
+
+            font-size: 7rem;
+            font-weight: 600;
+            font-family: $font-display;
+            text-shadow: $color-grey-dark-1 ;
+            color: $color-primary-dark;
+            margin-bottom: 1rem;
+          }
+
+          p {
+            font-size: 4rem;
+            color: $color-secondary;
+            font-weight: 600;
+          }
+            
+        }
     }
 
     &.active .carousel-text {
@@ -129,6 +232,7 @@
     width: 100%;
     overflow: hidden;
     line-height: 0;
+    border: none;
     transform: rotate(180deg);
     z-index: 5;
 }
