@@ -12,6 +12,7 @@
     flex-wrap: wrap;
 
      @media only screen and (max-width:$bp-medium) {
+          // flex-direction: column;
             
         }
 
@@ -175,6 +176,10 @@
       max-height: 400px;
       object-fit: cover;
       border-radius: 12px;
+
+      @media only screen and (max-width:$bp-medium) {
+               max-width: 100%;
+      }
     }
   }
 }

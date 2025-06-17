@@ -104,7 +104,31 @@
         font-weight: 600;
       }
 
-        @media only screen and (max-width:$bp-medium) {
+      @media only screen and (max-width:$bp-medium) {
+      position: absolute;
+      top: 20%;
+      left: 10%;
+      transform: translateY(-50%);
+      color: #fff;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+      animation: fadeInUp 2s ease-out forwards;
+      opacity: 0;
+
+      h2 {
+
+        font-size: 5rem;
+        font-weight: 600;
+        font-family: $font-display;
+        text-shadow: $color-grey-dark-1 ;
+        color: $color-primary-dark;
+        margin-bottom: 1rem;
+      }
+
+      p {
+        font-size: 3rem;
+        color: $color-secondary;
+        font-weight: 600;
+      }
             
         }
 
@@ -154,7 +178,7 @@
 
           h2 {
 
-            font-size: 7rem;
+            font-size: 5rem;
             font-weight: 600;
             font-family: $font-display;
             text-shadow: $color-grey-dark-1 ;
@@ -163,7 +187,7 @@
           }
 
           p {
-            font-size: 4rem;
+            font-size: 3rem;
             color: $color-secondary;
             font-weight: 600;
           }

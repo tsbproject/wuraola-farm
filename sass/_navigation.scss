@@ -1,25 +1,19 @@
 .header {
     &__navigation {
-        list-style: none;
-        
-        
        
-    }
-
-    &__navigation ul {
-        display: flex;
-        margin-right: 20rem;
+        
+         display: flex;
+         margin-right: 20rem;
         
         column-gap: 2rem;
         list-style-type: none;
         font-size: $default-font-size2;
         font-family: $font-display;
          font-weight: 400;
-        
-
-
-
+       
     }
+
+   
 
     &__navigation a {
         text-decoration: none;
