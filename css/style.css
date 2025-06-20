@@ -870,6 +870,38 @@ body {
   height: 25rem;
   background-color: #4CAF50;
 }
+@media only screen and (max-width: 56.25em) {
+  .aboutbanner {
+    align-content: normal;
+    justify-content: center;
+    padding: 0rem 2rem;
+    margin: auto 0;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .aboutbanner {
+    align-content: normal;
+    justify-content: center;
+    padding: 0rem 2rem;
+    margin: auto 0;
+  }
+}
+@media only screen and (max-width: 31.25em) {
+  .aboutbanner {
+    align-content: normal;
+    justify-content: center;
+    padding: 0rem 2rem;
+    margin: auto 0;
+  }
+}
+@media only screen and (max-width: 25em) {
+  .aboutbanner {
+    align-content: normal;
+    justify-content: center;
+    padding: 0rem 2rem;
+    margin: auto 0;
+  }
+}
 .aboutbanner__header h2 {
   font-size: 5rem;
   font-family: "Poppins", sans-serif;
@@ -907,7 +939,7 @@ body {
   .aboutbanner__header h2 {
     font-size: 3rem;
     padding: 0rem 2rem;
-    margin-top: 2rem;
+    margin-top: 5rem;
   }
 }
 .aboutbanner__header p {
