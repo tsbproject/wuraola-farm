@@ -66,27 +66,27 @@ body {
      
      
      @media only screen and (max-width: $bp-medium) {
-        grid-template-rows: 110vh repeat(2, min-content) 100vh;
+        grid-template-rows: 110vh repeat(2, min-content) min-content;
         grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
 
   } 
      
      
      @media only screen and (max-width: $bp-small) {
-         grid-template-rows: 110vh repeat(2, min-content) 190vh;
+         grid-template-rows: 110vh repeat(2, min-content) min-content;
         grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
 
   }
 
      @media only screen and (max-width: $bp-smaller) {
-     grid-template-rows: 70vh repeat(2, min-content) 190vh;
+     grid-template-rows: 70vh repeat(2, min-content) min-content;
     grid-template-columns: repeat(auto-fit, minmax(0vw, 1fr));
 
 }
     
 
     @media only screen and (max-width: $bp-smallest) {
-    grid-template-rows: 110vh repeat(2, min-content) 200vh;
+    grid-template-rows: 110vh repeat(2, min-content) min-content;
     grid-template-columns: repeat(auto-fit, minmax(0vw, 1fr));
     
    
