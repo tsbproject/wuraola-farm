@@ -1639,8 +1639,8 @@ body {
 @media only screen and (max-width: 37.5em) {
   .footer .footer-container {
     grid-template-columns: 1fr;
-    justify-items: center;
     text-align: center;
+    max-width: 100%;
   }
 }
 @media only screen and (max-width: 31.25em) {
@@ -1648,6 +1648,7 @@ body {
     grid-template-columns: 1fr;
     justify-items: center;
     text-align: center;
+    max-width: 100%;
   }
 }
 @media only screen and (max-width: 25em) {
@@ -1655,6 +1656,7 @@ body {
     grid-template-columns: 1fr;
     justify-items: center;
     text-align: center;
+    max-width: 100%;
   }
 }
 .footer .footer-section h4 {
