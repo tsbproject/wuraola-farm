@@ -30,6 +30,8 @@
 
      @media only screen and (max-width:$bp-small) {
             grid-template-columns:( 1fr);
+             justify-items: center;
+            text-align: center;
         }
 
      @media only screen and (max-width:$bp-smaller) {
@@ -55,6 +57,7 @@
 
       @media only screen and (max-width:$bp-smallest) {
          font-size: 1.6rem;
+          margin: 0 0;
       }
     }
 
