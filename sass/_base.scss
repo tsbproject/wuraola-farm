@@ -110,44 +110,44 @@ body {
 }
 
 /* Media Queries */
-@media only screen and (max-width: $bp-largest) { /* Replace $bp-largest */
+@media only screen and (max-width: $bp-largest) { 
    .container.services-layout {
-       grid-template-rows: 20vh 30vh repeat(7, min-content) 30vh min-content 30vh min-content min-content;
+       grid-template-rows:  repeat(5, min-content);
        grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
    }
 }
 
-@media only screen and (max-width: $bp-large) { /* Replace $bp-large */
+@media only screen and (max-width: $bp-large) {
    .container.services-layout {
-       grid-template-rows: 20vh 30vh repeat(7, min-content) 30vh min-content 30vh min-content min-content;
+       grid-template-rows:  repeat(5, min-content);
        grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
    }
 }
 
-@media only screen and (max-width: $bp-medium) { /* Replace $bp-medium */
+@media only screen and (max-width: $bp-medium) { 
    .container.services-layout {
-       grid-template-rows: 20vh 30vh repeat(7, min-content) 30vh min-content 30vh min-content min-content;
+       grid-template-rows:  repeat(5, min-content);
        grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
    }
 }
 
-@media only screen and (max-width: $bp-small) { /* Replace $bp-small */
+@media only screen and (max-width: $bp-small) { 
    .container.services-layout {
-       grid-template-rows: 20vh 30vh repeat(7, min-content) 30vh min-content 30vh min-content min-content;
+       grid-template-rows:  repeat(5, min-content);
        grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
    }
 }
 
-@media only screen and (max-width: $bp-smaller) { /* Replace $bp-smaller */
+@media only screen and (max-width: $bp-smaller) { 
    .container.services-layout {
-       grid-template-rows: 20vh 25vh repeat(7, min-content) 30vh min-content 30vh min-content min-content;
+        grid-template-rows:  repeat(5, min-content);
        grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
    }
 }
 
-@media only screen and (max-width: $bp-smallest) { /* Replace $bp-smallest */
+@media only screen and (max-width: $bp-smallest) {
    .container.services-layout {
-       grid-template-rows: 20vh repeat(8, min-content) 30vh min-content 30vh min-content min-content;
+        grid-template-rows:  repeat(5, min-content);
        grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
    }
 }
@@ -158,9 +158,9 @@ body {
 
 
 
-.pickup-layout {
+.products-layout {
    
-   grid-template-rows: 20vh  120vh    repeat(4, min-content) ;  
+   grid-template-rows:  repeat(6, min-content) ;  
    grid-template-columns: [full-start] minmax(6rem, 1fr)  [center-start] repeat(10, [col-start] minmax(min-content, 14rem) [col-end] ) [center-end] minmax(6rem, 1fr) [full-end];
 
    

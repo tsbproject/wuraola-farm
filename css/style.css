@@ -149,78 +149,78 @@ body {
 }
 
 /* Media Queries */
-@media only screen and (max-width: 75em) { /* Replace $bp-largest */
+@media only screen and (max-width: 75em) {
   .container.services-layout {
-    grid-template-rows: 20vh 30vh repeat(7, min-content) 30vh min-content 30vh min-content min-content;
+    grid-template-rows: repeat(5, min-content);
     grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
   }
 }
-@media only screen and (max-width: 68.75em) { /* Replace $bp-large */
+@media only screen and (max-width: 68.75em) {
   .container.services-layout {
-    grid-template-rows: 20vh 30vh repeat(7, min-content) 30vh min-content 30vh min-content min-content;
+    grid-template-rows: repeat(5, min-content);
     grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
   }
 }
-@media only screen and (max-width: 56.25em) { /* Replace $bp-medium */
+@media only screen and (max-width: 56.25em) {
   .container.services-layout {
-    grid-template-rows: 20vh 30vh repeat(7, min-content) 30vh min-content 30vh min-content min-content;
+    grid-template-rows: repeat(5, min-content);
     grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
   }
 }
-@media only screen and (max-width: 37.5em) { /* Replace $bp-small */
+@media only screen and (max-width: 37.5em) {
   .container.services-layout {
-    grid-template-rows: 20vh 30vh repeat(7, min-content) 30vh min-content 30vh min-content min-content;
+    grid-template-rows: repeat(5, min-content);
     grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
   }
 }
-@media only screen and (max-width: 31.25em) { /* Replace $bp-smaller */
+@media only screen and (max-width: 31.25em) {
   .container.services-layout {
-    grid-template-rows: 20vh 25vh repeat(7, min-content) 30vh min-content 30vh min-content min-content;
+    grid-template-rows: repeat(5, min-content);
     grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
   }
 }
-@media only screen and (max-width: 25em) { /* Replace $bp-smallest */
+@media only screen and (max-width: 25em) {
   .container.services-layout {
-    grid-template-rows: 20vh repeat(8, min-content) 30vh min-content 30vh min-content min-content;
+    grid-template-rows: repeat(5, min-content);
     grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
   }
 }
-.pickup-layout {
-  grid-template-rows: 20vh 120vh repeat(4, min-content);
+.products-layout {
+  grid-template-rows: repeat(6, min-content);
   grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(10, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
 }
 @media only screen and (max-width: 75em) {
-  .pickup-layout {
+  .products-layout {
     grid-template-rows: 20vh 120vh repeat(4, min-content);
     grid-template-columns: repeat(auto-fit, minmax(1fr));
   }
 }
 @media only screen and (max-width: 68.75em) {
-  .pickup-layout {
+  .products-layout {
     grid-template-rows: 20vh 120vh repeat(4, min-content);
     grid-template-columns: repeat(auto-fit, minmax(1fr));
   }
 }
 @media only screen and (max-width: 56.25em) {
-  .pickup-layout {
+  .products-layout {
     grid-template-rows: 20vh 120vh repeat(4, min-content);
     grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
   }
 }
 @media only screen and (max-width: 37.5em) {
-  .pickup-layout {
+  .products-layout {
     grid-template-rows: 20vh 120vh repeat(4, min-content);
     grid-template-columns: repeat(auto-fit, minmax(0rem, 1fr));
   }
 }
 @media only screen and (max-width: 31.25em) {
-  .pickup-layout {
+  .products-layout {
     grid-template-rows: 20vh 120vh repeat(4, min-content);
     grid-template-columns: repeat(auto-fit, minmax(0vw, 1fr));
   }
 }
 @media only screen and (max-width: 25em) {
-  .pickup-layout {
+  .products-layout {
     grid-template-rows: 20vh 120vh repeat(4, min-content);
     grid-template-columns: repeat(auto-fit, minmax(0rem, 1fr));
   }
@@ -1283,6 +1283,57 @@ body {
   font-weight: 600;
   color: #333;
   margin: 0;
+}
+
+.products {
+  padding: 6rem 2rem;
+  background-color: #fff;
+}
+.products__container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.products__section-title {
+  font-size: 3rem;
+  color: #26ae2a;
+  font-family: "Poppins", sans-serif;
+  margin: 4rem 0 2rem;
+  text-align: center;
+}
+.products__item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+  margin-bottom: 4rem;
+  padding: 2rem;
+  background-color: #f9f9f9;
+  border-radius: 1.2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+}
+@media screen and (max-width: 768px) {
+  .products__item {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+}
+.products__image img {
+  width: 100%;
+  border-radius: 1rem;
+  object-fit: cover;
+  max-height: 300px;
+}
+.products__details h3 {
+  font-size: 2.2rem;
+  color: #4CAF50;
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 1rem;
+}
+.products__details p {
+  font-size: 1.6rem;
+  color: #555;
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
 }
 
 .btn-carousel {
