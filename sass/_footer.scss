@@ -52,6 +52,10 @@
       font-size: 2rem;
       margin-bottom: 1rem;
       color: $color-secondary;
+
+      @media only screen and (max-width:$bp-smallest) {
+         font-size: 1.6rem;
+      }
     }
 
     ul {

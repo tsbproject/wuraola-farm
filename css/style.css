@@ -1660,6 +1660,11 @@ body {
   margin-bottom: 1rem;
   color: #F9A826;
 }
+@media only screen and (max-width: 25em) {
+  .footer .footer-section h4 {
+    font-size: 1.6rem;
+  }
+}
 .footer .footer-section ul {
   list-style: none;
   padding: 0;
