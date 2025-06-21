@@ -1,38 +1,39 @@
-// Ensure DOM is fully loaded before accessing elements
+//MOBILE MENU TOGGLE
+
 document.addEventListener('DOMContentLoaded', () => {
     const menuToggle = document.querySelector('.menu-toggle');
     const nav = document.querySelector('nav');
-    const closeBtn = document.querySelector('.close-btn'); // Optional close button
-    const navLinks = document.querySelectorAll('nav a'); // All menu links
+    const closeBtn = document.querySelector('.close-btn'); 
+    const navLinks = document.querySelectorAll('nav a'); 
 
     // Menu toggle functionality
     menuToggle.addEventListener('click', () => {
-        nav.classList.toggle('active'); // Add/remove 'active' class to show/hide menu
-        menuToggle.classList.toggle('active'); // Optionally rotate the toggle
+        nav.classList.toggle('active'); 
+        menuToggle.classList.toggle('active'); 
     });
 
-    // Close button functionality (if exists)
+   
     if (closeBtn) {
         closeBtn.addEventListener('click', () => {
-            nav.classList.remove('active'); // Remove 'active' class
-            menuToggle.classList.remove('active'); // Reset toggle state
+            nav.classList.remove('active'); 
+            menuToggle.classList.remove('active'); 
         });
     }
 
-    // Close menu when clicking anywhere on the carpet background
+  
     nav.addEventListener('click', (e) => {
-        // Check if the click is not on a menu item
+       
         if (!e.target.closest('a')) {
-            nav.classList.remove('active'); // Close menu
-            menuToggle.classList.remove('active'); // Reset toggle state
+            nav.classList.remove('active'); // 
+            menuToggle.classList.remove('active'); 
         }
     });
 
     // Optional: Close menu when clicking on a menu link
     navLinks.forEach(link => {
         link.addEventListener('click', () => {
-            nav.classList.remove('active'); // Close menu after selecting a link
-            menuToggle.classList.remove('active'); // Reset toggle state
+            nav.classList.remove('active'); 
+            menuToggle.classList.remove('active'); 
         });
     });
 });
@@ -60,3 +61,33 @@ scrollUpBtn.addEventListener('click', () => {
         behavior: 'smooth'
     });
 });
+
+
+
+ 
+//SERVICES PAGE MODAL
+
+const buttons = document.querySelectorAll('.read-more-btn');
+    const modals = document.querySelectorAll('.modal');
+    const closeButtons = document.querySelectorAll('.close-btn');
+
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const target = btn.getAttribute('data-modal');
+        document.getElementById(target).style.display = 'flex';
+      });
+    });
+
+    closeButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        btn.parentElement.parentElement.style.display = 'none';
+      });
+    });
+
+    window.addEventListener('click', e => {
+      modals.forEach(modal => {
+        if (e.target === modal) {
+          modal.style.display = 'none';
+        }
+      });
+    });

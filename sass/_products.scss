@@ -8,7 +8,7 @@
   }
 
   &__section-title {
-    font-size: 3rem;
+    font-size: 4rem;
     color: $color-primary-dark;
     font-family: $font-display;
     margin: 4rem 0 2rem;
@@ -37,6 +37,11 @@
     border-radius: 1rem;
     object-fit: cover;
     max-height: 300px;
+    transition: all 2s;
+
+    &:hover {
+      transform: translate(-5px);
+    }
   }
 
   &__details {
@@ -48,7 +53,7 @@
     }
 
     p {
-      font-size: 1.6rem;
+      font-size: 1.8rem;
       color: #555;
       font-family: $font-display;
       line-height: 1.6;
