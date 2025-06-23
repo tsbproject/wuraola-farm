@@ -30,7 +30,7 @@
 
      @media only screen and (max-width:$bp-small) {
             grid-template-columns:( 1fr);
-            
+            justify-items: center;
             text-align: center;
             max-width: 100%;
         }

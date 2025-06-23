@@ -30,6 +30,62 @@ mt-hg {
   margin-top: 8rem;
 }
 
+.consultancy-wrapper {
+  grid-column: full-start/full-end;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: auto;
+  align-items: center;
+}
+
+.consultancy-text {
+  color: #333;
+}
+
+.consultancy-text h1 {
+  color: #2f7034;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.consultancy-text h2 {
+  color: #2f7034;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.consultancy-text h3 {
+  color: #2f7034;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.consultancy-text p {
+  font-size: 1.7rem;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+.consultancy-text li {
+  font-size: 1.7rem;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+.consultancy-image img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .consultancy-wrapper {
+    grid-template-columns: 1fr;
+  }
+}
 .scroll-up-btn {
   position: fixed;
   bottom: 2rem;
@@ -185,125 +241,338 @@ body {
     grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
   }
 }
-.products-layout {
-  grid-template-rows: repeat(6, min-content);
+.container.products-layout {
+  display: grid;
+  grid-template-rows: repeat(7, min-content);
   grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(10, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
 }
 @media only screen and (max-width: 75em) {
-  .products-layout {
-    grid-template-rows: 20vh 120vh repeat(4, min-content);
+  .container.products-layout {
+    grid-template-rows: repeat(7, min-content);
     grid-template-columns: repeat(auto-fit, minmax(1fr));
   }
 }
 @media only screen and (max-width: 68.75em) {
-  .products-layout {
-    grid-template-rows: 20vh 120vh repeat(4, min-content);
+  .container.products-layout {
+    grid-template-rows: repeat(7, min-content);
     grid-template-columns: repeat(auto-fit, minmax(1fr));
   }
 }
 @media only screen and (max-width: 56.25em) {
-  .products-layout {
-    grid-template-rows: 20vh 120vh repeat(4, min-content);
+  .container.products-layout {
+    grid-template-rows: repeat(7, min-content);
     grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
   }
 }
 @media only screen and (max-width: 37.5em) {
-  .products-layout {
-    grid-template-rows: 20vh 120vh repeat(4, min-content);
+  .container.products-layout {
+    grid-template-rows: repeat(7, min-content);
     grid-template-columns: repeat(auto-fit, minmax(0rem, 1fr));
   }
 }
 @media only screen and (max-width: 31.25em) {
-  .products-layout {
-    grid-template-rows: 20vh 120vh repeat(4, min-content);
+  .container.products-layout {
+    grid-template-rows: repeat(7, min-content);
     grid-template-columns: repeat(auto-fit, minmax(0vw, 1fr));
   }
 }
 @media only screen and (max-width: 25em) {
-  .products-layout {
-    grid-template-rows: 20vh 120vh repeat(4, min-content);
+  .container.products-layout {
+    grid-template-rows: repeat(7, min-content);
     grid-template-columns: repeat(auto-fit, minmax(0rem, 1fr));
   }
 }
 
-.about-layout {
-  grid-template-rows: 20vh min-content 40vh repeat(2, min-content);
+.container.services-layout {
+  display: grid;
+  grid-template-rows: repeat(2, min-content);
   grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(10, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
 }
 @media only screen and (max-width: 75em) {
-  .about-layout {
-    grid-template-rows: 20vh min-content 40vh repeat(2, min-content);
+  .container.services-layout {
+    grid-template-rows: repeat(2, min-content);
     grid-template-columns: repeat(auto-fit, minmax(1fr));
   }
 }
 @media only screen and (max-width: 68.75em) {
-  .about-layout {
-    grid-template-rows: 20vh min-content 40vh repeat(2, min-content);
+  .container.services-layout {
+    grid-template-rows: repeat(2, min-content);
     grid-template-columns: repeat(auto-fit, minmax(1fr));
   }
 }
 @media only screen and (max-width: 56.25em) {
-  .about-layout {
-    grid-template-rows: 20vh repeat(4, min-content);
+  .container.services-layout {
+    grid-template-rows: repeat(2, min-content);
     grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
   }
 }
 @media only screen and (max-width: 37.5em) {
-  .about-layout {
-    grid-template-rows: 20vh repeat(4, min-content);
+  .container.services-layout {
+    grid-template-rows: repeat(2, min-content);
     grid-template-columns: repeat(auto-fit, minmax(0rem, 1fr));
   }
 }
 @media only screen and (max-width: 31.25em) {
-  .about-layout {
-    grid-template-rows: 20vh repeat(4, min-content);
+  .container.services-layout {
+    grid-template-rows: repeat(2, min-content);
     grid-template-columns: repeat(auto-fit, minmax(0vw, 1fr));
   }
 }
 @media only screen and (max-width: 25em) {
-  .about-layout {
-    grid-template-rows: 20vh repeat(4, min-content);
+  .container.services-layout {
+    grid-template-rows: repeat(2, min-content);
     grid-template-columns: repeat(auto-fit, minmax(0vw, 1fr));
   }
 }
 
-.contact-layout {
-  grid-template-rows: 20vh 60vh repeat(3, min-content);
+.container.farmconsult-layout {
+  display: grid;
+  grid-template-rows: repeat(2, min-content);
   grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(10, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
 }
 @media only screen and (max-width: 75em) {
-  .contact-layout {
-    grid-template-rows: 20vh 120vh repeat(4, min-content);
+  .container.farmconsult-layout {
+    grid-template-rows: repeat(2, min-content);
     grid-template-columns: repeat(auto-fit, minmax(1fr));
   }
 }
 @media only screen and (max-width: 68.75em) {
-  .contact-layout {
-    grid-template-rows: 20vh 120vh repeat(4, min-content);
+  .container.farmconsult-layout {
+    grid-template-rows: repeat(2, min-content);
     grid-template-columns: repeat(auto-fit, minmax(1fr));
   }
 }
 @media only screen and (max-width: 56.25em) {
-  .contact-layout {
-    grid-template-rows: 20vh 120vh repeat(4, min-content);
+  .container.farmconsult-layout {
+    grid-template-rows: repeat(2, min-content);
     grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
   }
 }
 @media only screen and (max-width: 37.5em) {
-  .contact-layout {
-    grid-template-rows: 20vh 120vh repeat(4, min-content);
+  .container.farmconsult-layout {
+    grid-template-rows: repeat(2, min-content);
     grid-template-columns: repeat(auto-fit, minmax(0rem, 1fr));
   }
 }
 @media only screen and (max-width: 31.25em) {
-  .contact-layout {
-    grid-template-rows: 20vh 120vh repeat(4, min-content);
+  .container.farmconsult-layout {
+    grid-template-rows: repeat(2, min-content);
     grid-template-columns: repeat(auto-fit, minmax(0vw, 1fr));
   }
 }
 @media only screen and (max-width: 25em) {
-  .contact-layout {
-    grid-template-rows: 20vh 120vh repeat(4, min-content);
+  .container.farmconsult-layout {
+    grid-template-rows: repeat(2, min-content);
+    grid-template-columns: repeat(auto-fit, minmax(0vw, 1fr));
+  }
+}
+
+.container.mechanizedfarm-layout {
+  display: grid;
+  grid-template-rows: repeat(2, min-content);
+  grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(10, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+}
+@media only screen and (max-width: 75em) {
+  .container.mechanizedfarm-layout {
+    grid-template-rows: repeat(2, min-content);
+    grid-template-columns: repeat(auto-fit, minmax(1fr));
+  }
+}
+@media only screen and (max-width: 68.75em) {
+  .container.mechanizedfarm-layout {
+    grid-template-rows: repeat(2, min-content);
+    grid-template-columns: repeat(auto-fit, minmax(1fr));
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  .container.mechanizedfarm-layout {
+    grid-template-rows: repeat(2, min-content);
+    grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .container.mechanizedfarm-layout {
+    grid-template-rows: repeat(2, min-content);
+    grid-template-columns: repeat(auto-fit, minmax(0rem, 1fr));
+  }
+}
+@media only screen and (max-width: 31.25em) {
+  .container.mechanizedfarm-layout {
+    grid-template-rows: repeat(2, min-content);
+    grid-template-columns: repeat(auto-fit, minmax(0vw, 1fr));
+  }
+}
+@media only screen and (max-width: 25em) {
+  .container.mechanizedfarm-layout {
+    grid-template-rows: repeat(2, min-content);
+    grid-template-columns: repeat(auto-fit, minmax(0vw, 1fr));
+  }
+}
+
+.container.agroallied-layout {
+  display: grid;
+  grid-template-rows: repeat(2, min-content);
+  grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(10, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+}
+@media only screen and (max-width: 75em) {
+  .container.agroallied-layout {
+    grid-template-rows: repeat(2, min-content);
+    grid-template-columns: repeat(auto-fit, minmax(1fr));
+  }
+}
+@media only screen and (max-width: 68.75em) {
+  .container.agroallied-layout {
+    grid-template-rows: repeat(2, min-content);
+    grid-template-columns: repeat(auto-fit, minmax(1fr));
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  .container.agroallied-layout {
+    grid-template-rows: repeat(2, min-content);
+    grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .container.agroallied-layout {
+    grid-template-rows: repeat(2, min-content);
+    grid-template-columns: repeat(auto-fit, minmax(0rem, 1fr));
+  }
+}
+@media only screen and (max-width: 31.25em) {
+  .container.agroallied-layout {
+    grid-template-rows: repeat(2, min-content);
+    grid-template-columns: repeat(auto-fit, minmax(0vw, 1fr));
+  }
+}
+@media only screen and (max-width: 25em) {
+  .container.agroallied-layout {
+    grid-template-rows: repeat(2, min-content);
+    grid-template-columns: repeat(auto-fit, minmax(0vw, 1fr));
+  }
+}
+
+.container.farmconsult-layout {
+  display: grid;
+  grid-template-rows: repeat(2, min-content);
+  grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(10, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+}
+@media only screen and (max-width: 75em) {
+  .container.farmconsult-layout {
+    grid-template-rows: repeat(2, min-content);
+    grid-template-columns: repeat(auto-fit, minmax(1fr));
+  }
+}
+@media only screen and (max-width: 68.75em) {
+  .container.farmconsult-layout {
+    grid-template-rows: repeat(2, min-content);
+    grid-template-columns: repeat(auto-fit, minmax(1fr));
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  .container.farmconsult-layout {
+    grid-template-rows: repeat(2, min-content);
+    grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .container.farmconsult-layout {
+    grid-template-rows: repeat(2, min-content);
+    grid-template-columns: repeat(auto-fit, minmax(0rem, 1fr));
+  }
+}
+@media only screen and (max-width: 31.25em) {
+  .container.farmconsult-layout {
+    grid-template-rows: repeat(2, min-content);
+    grid-template-columns: repeat(auto-fit, minmax(0vw, 1fr));
+  }
+}
+@media only screen and (max-width: 25em) {
+  .container.farmconsult-layout {
+    grid-template-rows: repeat(2, min-content);
+    grid-template-columns: repeat(auto-fit, minmax(0vw, 1fr));
+  }
+}
+
+.container.animalhus-layout {
+  display: grid;
+  grid-template-rows: repeat(2, min-content);
+  grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(10, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+}
+@media only screen and (max-width: 75em) {
+  .container.animalhus-layout {
+    grid-template-rows: repeat(2, min-content);
+    grid-template-columns: repeat(auto-fit, minmax(1fr));
+  }
+}
+@media only screen and (max-width: 68.75em) {
+  .container.animalhus-layout {
+    grid-template-rows: repeat(2, min-content);
+    grid-template-columns: repeat(auto-fit, minmax(1fr));
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  .container.animalhus-layout {
+    grid-template-rows: repeat(2, min-content);
+    grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .container.animalhus-layout {
+    grid-template-rows: repeat(2, min-content);
+    grid-template-columns: repeat(auto-fit, minmax(0rem, 1fr));
+  }
+}
+@media only screen and (max-width: 31.25em) {
+  .container.animalhus-layout {
+    grid-template-rows: repeat(2, min-content);
+    grid-template-columns: repeat(auto-fit, minmax(0vw, 1fr));
+  }
+}
+@media only screen and (max-width: 25em) {
+  .container.animalhus-layout {
+    grid-template-rows: repeat(2, min-content);
+    grid-template-columns: repeat(auto-fit, minmax(0vw, 1fr));
+  }
+}
+
+.container.contactus-layout {
+  display: grid;
+  grid-template-rows: repeat(4, min-content);
+  grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(10, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+}
+@media only screen and (max-width: 75em) {
+  .container.contactus-layout {
+    grid-template-rows: repeat(4, min-content);
+    grid-template-columns: repeat(auto-fit, minmax(1fr));
+  }
+}
+@media only screen and (max-width: 68.75em) {
+  .container.contactus-layout {
+    grid-template-rows: repeat(4, min-content);
+    grid-template-columns: repeat(auto-fit, minmax(1fr));
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  .container.contactus-layout {
+    grid-template-rows: repeat(4, min-content);
+    grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .container.contactus-layout {
+    grid-template-rows: repeat(4, min-content);
+    grid-template-columns: repeat(auto-fit, minmax(0rem, 1fr));
+  }
+}
+@media only screen and (max-width: 31.25em) {
+  .container.contactus-layout {
+    grid-template-rows: repeat(4, min-content);
+    grid-template-columns: repeat(auto-fit, minmax(0vw, 1fr));
+  }
+}
+@media only screen and (max-width: 25em) {
+  .container.contactus-layout {
+    grid-template-rows: repeat(4, min-content);
     grid-template-columns: repeat(auto-fit, minmax(0rem, 1fr));
   }
 }
@@ -1286,6 +1555,7 @@ body {
 }
 
 .products {
+  grid-column: full-start/full-end;
   padding: 6rem 2rem;
   background-color: #fff;
 }
@@ -1350,6 +1620,7 @@ body {
 }
 
 .services-list {
+  grid-column: full-start/full-end;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
@@ -1441,6 +1712,110 @@ body {
   }
   .modal-content {
     margin: 1rem;
+  }
+}
+.contact-info {
+  grid-column: full-start/full-end;
+  background: #2f7034;
+  color: #fff;
+  padding: 3rem 2rem;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+@media only screen and (max-width: 25em) {
+  .info-grid {
+    grid-template-columns: repeat(1fr);
+    max-width: 100%;
+  }
+}
+
+.info-box h3 {
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
+}
+
+.info-box p {
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+.contact-main {
+  grid-column: full-start/full-end;
+  padding: 4rem 2rem;
+  background: #fff;
+}
+
+.contact-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: auto;
+  align-items: center;
+}
+
+.contact-image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.contact-form h2 {
+  font-size: 1.7rem;
+  margin-bottom: 1rem;
+  color: #2f7034;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1.5rem;
+}
+
+.contact-form button {
+  background: #2f7034;
+  color: #fff;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.3rem;
+  transition: background 0.3s;
+}
+
+#innerText {
+  font-size: 2rem;
+}
+
+.contact-form button:hover {
+  background: #245727;
+}
+
+.map iframe {
+  grid-column: full-start/full-end;
+  width: 100%;
+  height: 400px;
+  border: none;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .contact-container {
+    grid-template-columns: 1fr;
   }
 }
 .btn-carousel {
@@ -1829,6 +2204,7 @@ body {
 @media only screen and (max-width: 37.5em) {
   .footer .footer-container {
     grid-template-columns: 1fr;
+    justify-items: center;
     text-align: center;
     max-width: 100%;
   }

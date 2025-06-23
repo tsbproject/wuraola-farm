@@ -91,3 +91,11 @@ const buttons = document.querySelectorAll('.read-more-btn');
         }
       });
     });
+
+
+     // Math Captcha Script
+    const num1 = Math.floor(Math.random() * 10);
+    const num2 = Math.floor(Math.random() * 10);
+    const answer = num1 + num2;
+    document.getElementById("math-question").innerText = `What is the sum of ${num1} + ${num2}?`;
+    document.getElementById("captcha-answer").value = answer;

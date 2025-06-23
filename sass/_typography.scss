@@ -1,3 +1,78 @@
+///////////////////////////////////
+/// FARM CONSULTANCY
+
+
+.consultancy-wrapper {
+    grid-column:full-start / full-end ;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      padding: 4rem 2rem;
+      max-width: 1200px;
+      margin: auto;
+      align-items: center;
+    }
+
+    .consultancy-text {
+      color: #333;
+    }
+
+    .consultancy-text h1 {
+      color: #2f7034;
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .consultancy-text h2 {
+      color: #2f7034;
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+     .consultancy-text h3 {
+      color: #2f7034;
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .consultancy-text p {
+      font-size: $default-font-size;  
+      line-height: 1.8;
+      margin-bottom: 1rem;
+    }
+
+
+     .consultancy-text li {
+      font-size: $default-font-size;  
+      line-height: 1.8;
+      margin-bottom: 1rem;
+    }
+
+    .consultancy-image img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    @media (max-width: 768px) {
+      .consultancy-wrapper {
+        grid-template-columns: 1fr;
+      }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //////////////////////////////////////
 /// SCROLL UP BUTTON STYLES
 
